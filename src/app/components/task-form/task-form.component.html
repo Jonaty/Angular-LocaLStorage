@@ -1,0 +1,16 @@
+<div class="card">
+	<div class="card-body">
+		<form #forma="ngForm">
+			<div class="form-group">
+				<input type="text" placeholder="Task title" class="form-control" name="taskTitle" id="titleInput"
+					[(ngModel)]="taskTitle" #taskTitleInp="ngModel" autofocus required>
+			</div>
+
+			<div class="form-group">
+				<textarea placeholder="Task descripcion" class="form-control" name="taskDescription"
+					[(ngModel)]="taskDescription" #taskDescriptionInp="ngModel" cols="30" rows="10" required></textarea>
+			</div>
+			<button class="btn btn-primary btn-block" [disabled]="forma.invalid" (click)="addTask()">Send</button>
+		</form>
+	</div>
+</div>
